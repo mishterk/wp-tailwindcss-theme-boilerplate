@@ -1,4 +1,4 @@
-A minimalistic boilerplate for build WordPress themes using [Laravel Mix](https://laravel.com/docs/5.8/mix).
+A minimalist boilerplate for WordPress theme development using [Laravel Mix](https://laravel.com/docs/5.8/mix).
 
 ## Getting started:
 
@@ -25,4 +25,6 @@ This will prepare versioned assets and sourcemaps for your CSS and JS files.
 
 Versioned assets will appear in a `build` directory alongside a manifest file which is used while 
 [enqueuing scripts and styles](https://github.com/mishterk/wp-laravel-mix-theme-boilerplate/blob/master/includes/scripts-and-styles.php).
+This saves you the need to adjust version parameters on your assets and makes it possible to remove parameters on 
+asset URLs without losing the ability to force those assets to update in browsers.
 
