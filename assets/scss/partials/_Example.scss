@@ -1,0 +1,56 @@
+$module: '.Example';
+#{$module} {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2F5F8;
+  font-family: Source Sans Pro, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+  padding: 1em;
+  font-weight: 300;
+  color: #8795a1;
+  line-height: 1.4;
+
+  &__inner {
+    text-align: center;
+    padding: 3em 5em;
+    border-radius: 0.25em;
+    background-color: white;
+    box-shadow: 0 1em 1.25em 0 rgba(0, 0, 0, .06), 0 0.65em 0.65em 0 rgba(0, 0, 0, .08);
+    max-width: 600px;
+  }
+
+  &__title{
+
+  }
+
+  h1 {
+    font-weight: 400;
+    color: #22292f;
+  }
+
+  h2 {
+    font-weight: 400;
+    color: #22292f;
+  }
+
+  a {
+    &, &:visited {
+      text-decoration: none;
+      color: #6CB2EB;
+
+      &:hover,
+      &:focus {
+        color: #3490DC;
+      }
+
+      &:active {
+      }
+    }
+  }
+
+}
