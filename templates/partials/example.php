@@ -11,9 +11,8 @@
         <p>Simply put, it is a very straight-forward and easy to use wrapper for webpack that removes the need for
             a lot of the configuration that we would normally have to go through when using alternatives.</p>
 
-        <p>For a sense of how simple it is to set up, check out the webpack.mix.js file in the them root.</p>
-
-        <p><a href="https://laravel.com/docs/5.8/mix" target="_blank">You can learn more about Laravel Mix
+        <p>For a sense of how simple it is to set up, check out the webpack.mix.js file in the them root. <a
+                    href="https://laravel.com/docs/5.8/mix" target="_blank">You can learn more about Laravel Mix
                 here.</a></p>
 
     </div>
