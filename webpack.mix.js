@@ -3,6 +3,12 @@ require('laravel-mix-versionhash');
 
 mix.setPublicPath('./build');
 
+mix.webpackConfig({
+    externals: {
+        "jquery": "jQuery",
+    }
+});
+
 mix.browserSync({
     proxy: 'http://localhost/',
     injectChanges: true,
