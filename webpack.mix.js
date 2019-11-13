@@ -1,4 +1,5 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
+const local = require('./local');
 require('laravel-mix-versionhash');
 
 mix.setPublicPath('./build');
@@ -9,14 +10,16 @@ mix.webpackConfig({
     }
 });
 
-mix.browserSync({
-    proxy: 'http://localhost/',
-    injectChanges: true,
-    open: false,
-    files: [
-        'build/**/*.{css,js}'
-    ]
-});
+if (local.proxy) {
+    mix.browserSync({
+        proxy: local.proxy,
+        injectChanges: true,
+        open: false,
+        files: [
+            'build/**/*.{css,js}'
+        ]
+    });
+}
 
 mix.js('assets/js/app.js', 'js');
 mix.sass('assets/scss/app.scss', 'css');

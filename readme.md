@@ -5,7 +5,7 @@ A minimalist boilerplate for WordPress theme development using [Laravel Mix](htt
 1. Clone into an empty theme directory
 1. `cd` into your new theme directory
 1. Run `npm install`
-1. Open up the `webpack.mix.js` file and replace `http://localhost/` with your local development hostname
+1. Copy the `local-example.json` file to `local.json` and replace the `proxy` value with your local development hostname
    - This will allow you to use live reload/injection while working on your CSS/JS
   
 ### To Start Development
