@@ -14,5 +14,6 @@ $loader = new \WPLMixTheme\AutoLoader();
 $loader->register();
 $loader->addNamespace( 'WPLMixTheme', get_stylesheet_directory() . '/app' );
 
+\WPLMixTheme\View::$view_dir = get_stylesheet_directory() . '/templates/views';
 
 require get_stylesheet_directory() . '/includes/scripts-and-styles.php';
