@@ -1,10 +1,11 @@
-// you can import modules from the theme lib or even from NPM packages if they support it...
-import ExampleModule1 from './modules/example-1'
+// you can import modules from the theme lib or even from
+// NPM packages if they support it...
+import ExampleComponent1 from "./components/ExampleComponent1";
 
-ExampleModule1.init();
+ExampleComponent1.init();
 
 
 // you can also require modules if they support it...
-const ExampleModule2 = require('./modules/example-2');
+const ExampleModule2 = require('./components/example-2');
 
 ExampleModule2.init();
