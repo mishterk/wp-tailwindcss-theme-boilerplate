@@ -1,5 +1,10 @@
 <?php
 
+
+use WPLMixTheme\AutoLoader;
+use WPLMixTheme\View;
+
+
 /*
  * Set up our auto loading class and mapping our namespace to the app directory.
  *
@@ -10,10 +15,10 @@
  * as the autoloader will handle that for you.
  */
 require get_stylesheet_directory() . '/app/AutoLoader.php';
-$loader = new \WPLMixTheme\AutoLoader();
+$loader = new AutoLoader();
 $loader->register();
 $loader->addNamespace( 'WPLMixTheme', get_stylesheet_directory() . '/app' );
 
-\WPLMixTheme\View::$view_dir = get_stylesheet_directory() . '/templates/views';
+View::$view_dir = get_stylesheet_directory() . '/templates/views';
 
 require get_stylesheet_directory() . '/includes/scripts-and-styles.php';
