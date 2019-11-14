@@ -20,7 +20,7 @@
 		// no context-specific functionality – the simply render data handed to them as follows:
 		\WPLMixTheme\View::render( 'ExampleView', [
 			'title' => 'Who am I?',
-			'text' => 'My name is Phil Kurth and I built themes and plugins for WordPress. You can learn more about me at <a href="https://philkurth.com.au/" target="_blank">philkurth.com.au</a>',
+			'text' => 'My name is Phil Kurth and I build themes and plugins for WordPress. You can learn more about me at <a href="https://philkurth.com.au/" target="_blank">philkurth.com.au</a>',
 		] ); ?>
 
     </div>
