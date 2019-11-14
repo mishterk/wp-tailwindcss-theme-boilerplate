@@ -1,5 +1,5 @@
 const $ = window.jQuery;
-const $window = $window || $(window);
+const $window = window.$window || $(window);
 
 const ExampleComponent1 = {
 
