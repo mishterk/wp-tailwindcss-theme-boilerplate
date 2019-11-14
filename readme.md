@@ -8,6 +8,7 @@ A boilerplate for WordPress theme development using [TailwindCSS](https://tailwi
 1. Duplicate the `local-example.json` file and rename to `local.json`, then replace the `proxy` value with your local 
 development hostname
    - This will allow you to use live reload/injection while working on your CSS/JS
+1. Run `npm run dev` and start coding
    
 ## Commands
    
@@ -23,4 +24,31 @@ Versioned assets will appear in a `build` directory alongside a manifest file wh
 [enqueuing scripts and styles](https://github.com/mishterk/wp-laravel-mix-theme-boilerplate/blob/master/includes/scripts-and-styles.php).
 This saves you the need to adjust version parameters on your assets and makes it possible to remove parameters on 
 asset URLs without losing the ability to force those assets to update in browsers.
+
+## Purgecss
+
+Purgecss is pretty darn excellent and is used to strip out any CSS that isn't being used during the production build. 
+
+It does this by looking through specified template files to work out which CSS selectors have been used. If it can't 
+find a CSS rule being used in the templates, it removes it from the final CSS. 
+
+See the `paths` option in the `mix.purgeCss()` invocation in `webpack.mix.js` for the file paths being looked at. 
+
+### How to tell Purgecss to ignore things
+
+The easiest way is to delineate your CSS using the following comment format:
+
+```css
+/* purgecss start ignore */
+h1 {
+  color: blue;
+}
+
+h3 {
+  color: green;
+}
+/* purgecss end ignore */
+```
+
+See [whitelisting](https://www.purgecss.com/whitelisting) for more options.   
 
