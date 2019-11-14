@@ -35,7 +35,7 @@ class AssetResolver {
 			$path = self::leading_slash_it( $path );
 
 			if ( isset( $map[ $path ] ) ) {
-				return get_stylesheet_directory_uri() . '/build/' . self::leading_slash_it( $map[ $path ] );
+				return get_stylesheet_directory_uri() . '/build' . self::leading_slash_it( $map[ $path ] );
 			}
 		}
 
