@@ -1,0 +1,70 @@
+// Add any custom base CSS can go here
+
+
+// Foundation
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+html {
+  @apply antialiased;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+
+  @screen md {
+    font-size: 18px;
+  }
+}
+
+
+// Anchors
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+a {
+  &, &:visited {
+    @apply text-link;
+    transition: all 0.24s ease;
+
+    &:hover,
+    &:focus {
+      @apply text-link-hover;
+    }
+
+    &:active {
+    }
+
+    // If an anchor exists inside a heading, inherit the headings color
+    $this: &;
+    @at-root h1, h2, h3, h4, h5, h6 {
+      #{$this} {
+        color: inherit;
+      }
+    }
+  }
+}
+
+
+// Headings
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif font-semibold text-black leading-tight;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3, h4, h5 {
+  @apply text-lg;
+}
+
+
+// Other
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+p, ul, ol, .wp-block-embed {
+  @apply my-8;
+}
+
+code {
+  @apply font-mono inline-block px-1 rounded-sm text-sm align-baseline bg-pink-100 text-pink-600;
+}
