@@ -1,9 +1,9 @@
 <div class="Example bg-blue-100 fixed flex inset-0 items-center justify-center">
     <div class="Example__inner bg-white max-w-2xl p-12 rounded-lg shadow-lg text-center">
 
-        <h1 class="Example__title">WP Tailwind CSS Boilerplate</h1>
+        <h1 class="Example__title">WP Tailwind CSS Theme Boilerplate</h1>
 
-        <p>This is a just a very minimalistic theme boiler that gets you started with
+        <p class="text-gray-700">This is a just a very minimalistic theme boiler that gets you started with
             <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> &
             <a href="https://laravel.com/docs/5.8/mix" target="_blank" rel="noopener noreferrer">Laravel Mix</a> for
             building custom WordPress themes.</p>
