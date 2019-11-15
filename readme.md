@@ -25,16 +25,16 @@ Versioned assets will appear in a `build` directory alongside a manifest file wh
 This saves you the need to adjust version parameters on your assets and makes it possible to remove parameters on 
 asset URLs without losing the ability to force those assets to update in browsers.
 
-## Purgecss
+## Purge CSS
 
-Purgecss is pretty darn excellent and is used to strip out any CSS that isn't being used during the production build. 
+Purge CSS is pretty darn excellent and is used to strip out any CSS that isn't being used during the production build. 
 
 It does this by looking through specified template files to work out which CSS selectors have been used. If it can't 
 find a CSS rule being used in the templates, it removes it from the final CSS. 
 
 See the `paths` option in the `mix.purgeCss()` invocation in `webpack.mix.js` for the file paths being looked at. 
 
-### How to tell Purgecss to ignore things
+### How to tell Purge CSS to ignore things
 
 The easiest way is to delineate your CSS with comments as per the example below. See 
 [whitelisting](https://www.purgecss.com/whitelisting) for more options.   
