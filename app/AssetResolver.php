@@ -1,7 +1,7 @@
 <?php
 
 
-namespace WPLMixTheme;
+namespace WpTailwindCssThemeBoilerplate;
 
 
 /**
@@ -13,7 +13,7 @@ namespace WPLMixTheme;
  * This class provides the functionality to resolve the file name using the generated manifest at
  * /build/mix-manifest.json without having to specify the version hash.
  *
- * @package WPLMixTheme
+ * @package WpTailwindCssThemeBoilerplate
  */
 class AssetResolver {
 

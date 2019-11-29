@@ -1,7 +1,7 @@
 <?php
 
 
-use WPLMixTheme\AssetResolver;
+use WpTailwindCssThemeBoilerplate\AssetResolver;
 
 
 add_action( 'wp_enqueue_scripts', function () {

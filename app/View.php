@@ -1,7 +1,7 @@
 <?php
 
 
-namespace WPLMixTheme;
+namespace WpTailwindCssThemeBoilerplate;
 
 
 class View {
