@@ -19,7 +19,8 @@ if (local.proxy) {
         injectChanges: true,
         open: false,
         files: [
-            'build/**/*.{css,js}'
+            'build/**/*.{css,js}',
+            'templates/**/*.php'
         ]
     });
 }
