@@ -11,7 +11,7 @@
 // If you need responsiveness for vertical margin-between,
 // consider using the following pattern instead:
 // EXAMPLE:
-//    <ul class="m-contain">
+//    <ul class="m-trim">
 //      <li class="mt-2 lg:mt-12">List Item</li>
 //      <li class="mt-2 lg:mt-12">List item</li>
 //    </ul>
@@ -98,7 +98,7 @@
 // element.
 // =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
 @responsive {
-  .m-contain {
+  .m-trim {
     @include first_last_marginless;
   }
 }
@@ -107,7 +107,7 @@
 // element where items are horizontally arranged.
 // =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
 @responsive {
-  .hm-contain {
+  .hm-trim {
     @include first_last_marginless_hor;
   }
 }
