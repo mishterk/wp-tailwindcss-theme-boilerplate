@@ -1,8 +1,22 @@
 // Add any custom utility classes here
 
-
-// todo - make a tailwind plugin/directive out of this
-.mbetween {
+// Add vertical (top) margin between adjacent items with the
+// class. Note: this doesn't have a responsive wrapper as & + &
+// does not generate the expected responsive output.
+// EXAMPLE:
+//    <div class="m-between-4"></div>
+//    <div class="m-between-4"></div>
+//    <div class="m-between-4"></div>
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// If you need responsiveness for vertical margin-between,
+// consider using the following pattern instead:
+// EXAMPLE:
+//    <ul class="m-contain">
+//      <li class="mt-2 lg:mt-12">List Item</li>
+//      <li class="mt-2 lg:mt-12">List item</li>
+//    </ul>
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+.m-between {
   & + & {
     @apply mt-1;
   }
@@ -14,7 +28,15 @@
   }
 }
 
-.mbetween-h {
+// Add vertical (top) margin between adjacent items with the
+// class. Note: this doesn't have a responsive wrapper as & + &
+// does not generate the expected responsive output.
+// EXAMPLE:
+//    <div class="hm-between-4"></div>
+//    <div class="hm-between-4"></div>
+//    <div class="hm-between-4"></div>
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+.hm-between {
   & + & {
     @apply ml-1;
   }
@@ -26,9 +48,66 @@
   }
 }
 
-// todo - tailwind directive
+// Add vertical (top) margin between child items within an
+// element.
+// EXAMPLE:
+//    <ul class="m-between-children md:m-between-children-4">
+//      <li>List Item</li>
+//      <li>List item</li>
+//    </ul>
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
 @responsive {
-  .m-0-first-last {
+  .m-between-children {
+
+    & > :not(:first-child) {
+      @apply mt-1;
+    }
+
+    @each $i in 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, px {
+      &-#{$i} > :not(:first-child) {
+        @apply mt-#{$i};
+      }
+    }
+  }
+}
+
+// Add horizontal (left) margin between child items within an
+// element.
+// EXAMPLE:
+//    <ul class="hm-between-children md:hm-between-children-4">
+//      <li>List Item</li>
+//      <li>List item</li>
+//    </ul>
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+@responsive {
+  .hm-between-children {
+
+    & > :not(:first-child) {
+      @apply ml-1;
+    }
+
+    @each $i in 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, px {
+      &-#{$i} > :not(:first-child) {
+        @apply ml-#{$i};
+      }
+    }
+  }
+}
+
+// Set 0 outer margin on first and last child items within an
+// element.
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+@responsive {
+  .m-contain {
     @include first_last_marginless;
+  }
+}
+
+// Set 0 outer margin on first and last child items within an
+// element where items are horizontally arranged.
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+@responsive {
+  .hm-contain {
+    @include first_last_marginless_hor;
   }
 }
