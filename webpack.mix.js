@@ -1,9 +1,7 @@
 const mix = require('laravel-mix');
 const local = require('./local');
-const glob = require('glob-all');
 require('laravel-mix-versionhash');
 require('laravel-mix-tailwind');
-require('laravel-mix-purgecss');
 
 mix.setPublicPath('./build');
 
