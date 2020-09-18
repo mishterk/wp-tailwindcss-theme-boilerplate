@@ -16,7 +16,6 @@
   "author": "Phil Kurth <phil@philkurth.com.au>",
   "license": "MIT",
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.3.0",
     "browser-sync": "^2.26.12",
     "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^5.2.0",
