@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-const local = require('./local');
+const local = require('./assets/js/utils/local-config');
 require('laravel-mix-versionhash');
 require('laravel-mix-tailwind');
 
@@ -24,7 +24,6 @@ if (local.proxy) {
 }
 
 mix.tailwind();
-
 mix.js('assets/js/app.js', 'js');
 mix.sass('assets/scss/app.scss', 'css');
 

@@ -19,6 +19,7 @@
     "browser-sync": "^2.26.12",
     "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^5.2.0",
+    "fs": "0.0.1-security",
     "glob-all": "^3.2.1",
     "laravel-mix": "^4.0.14",
     "laravel-mix-purgecss": "^4.2.0",
