@@ -12,6 +12,7 @@ $module: '.Wysiwyg';
   @extend .WysiwygHeadings;
   @extend .WysiwygCode;
   @extend .WysiwygSpacing;
+  @extend .WysiwygLists;
 }
 
 $module: '.WysiwygAnchors';
@@ -70,5 +71,25 @@ $module: '.WysiwygSpacing';
 #{$module} {
   p, ul, ol, .wp-block-embed {
     @apply my-8;
+  }
+}
+
+$module: '.WysiwygLists';
+#{$module} {
+  ul, ol {
+    @apply ml-6 list-outside;
+    @include first_last_marginless;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li {
+    @apply my-3;
   }
 }
