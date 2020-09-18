@@ -1,4 +1,13 @@
 module.exports = {
+    future: {
+        removeDeprecatedGapUtilities: true,
+        purgeLayersByDefault: true,
+    },
+    purge: [
+        './*.php',
+        './templates/**/*.php',
+        './build/js/**/*.js',
+    ],
     theme: {
         container: {
             padding: '1.5rem',
