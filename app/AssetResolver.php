@@ -51,7 +51,7 @@ class AssetResolver {
 			$manifest = get_stylesheet_directory() . '/build/mix-manifest.json';
 
 			if (
-				$map = file_get_contents( $manifest ) and
+				$map = @file_get_contents( $manifest ) and
 				is_array( $map = json_decode( $map, true ) )
 			) {
 				self::$manifest = $map;
