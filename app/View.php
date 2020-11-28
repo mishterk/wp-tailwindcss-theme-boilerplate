@@ -1,7 +1,7 @@
 <?php
 
 
-namespace WpTailwindCssThemeBoilerplate;
+namespace TailwindCSS;
 
 
 class View {

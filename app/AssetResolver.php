@@ -1,7 +1,7 @@
 <?php
 
 
-namespace WpTailwindCssThemeBoilerplate;
+namespace TailwindCSS;
 
 
 /**
@@ -13,7 +13,7 @@ namespace WpTailwindCssThemeBoilerplate;
  * This class provides the functionality to resolve the file name using the generated manifest at
  * /build/mix-manifest.json without having to specify the version hash.
  *
- * @package WpTailwindCssThemeBoilerplate
+ * @package TailwindCSS
  */
 class AssetResolver {
 

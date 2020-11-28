@@ -1,7 +1,7 @@
 <?php
 
 
-use WpTailwindCssThemeBoilerplate\AssetResolver;
+use TailwindCSS\AssetResolver;
 
 
 add_action( 'wp_enqueue_scripts', function () {
