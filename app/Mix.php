@@ -15,7 +15,7 @@ namespace WpTailwindCssThemeBoilerplate;
  *
  * @package WpTailwindCssThemeBoilerplate
  */
-class AssetResolver {
+class Mix {
 
 
 	/**
