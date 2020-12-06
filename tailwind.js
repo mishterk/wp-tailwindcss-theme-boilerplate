@@ -6,7 +6,7 @@ module.exports = {
     purge: [
         './*.php',
         './templates/**/*.php',
-        './build/js/**/*.js',
+        './assets/js/**/*.js',
     ],
     theme: {
         container: {
