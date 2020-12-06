@@ -3,3 +3,6 @@
 node_modules
 assets
 local.json
+composer.lock
+vendor
+.php_cs.cache
