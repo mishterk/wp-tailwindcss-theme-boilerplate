@@ -1,8 +1,6 @@
 <?php
 
-
 namespace WpTailwindCssThemeBoilerplate;
-
 
 /**
  * Class AssetResolver
@@ -15,61 +13,57 @@ namespace WpTailwindCssThemeBoilerplate;
  *
  * @package WpTailwindCssThemeBoilerplate
  */
-class Mix {
+class Mix
+{
+    /**
+     * @var array
+     */
+    private static $manifest = [];
 
+    /**
+     * @param $path
+     *
+     * @return string
+     */
+    public static function resolve($path)
+    {
+        if ($map = self::getManifest()) {
+            $path = self::leadingSlashIt($path);
 
-	/**
-	 * @var array
-	 */
-	private static $manifest = [];
+            if (isset($map[ $path ])) {
+                return get_stylesheet_directory_uri() . '/assets' . self::leadingSlashIt($map[ $path ]);
+            }
+        }
 
+        return '';
+    }
 
-	/**
-	 * @param $path
-	 *
-	 * @return string
-	 */
-	public static function resolve( $path ) {
-		if ( $map = self::get_manifest() ) {
+    /**
+     * @return array|mixed|object
+     */
+    private static function getManifest()
+    {
+        if (! self::$manifest) {
+            $manifest = get_stylesheet_directory() . '/assets/mix-manifest.json';
 
-			$path = self::leading_slash_it( $path );
+            if (
+                $map = file_get_contents($manifest)
+                and is_array($map = json_decode($map, true))
+            ) {
+                self::$manifest = $map;
+            }
+        }
 
-			if ( isset( $map[ $path ] ) ) {
-				return get_stylesheet_directory_uri() . '/assets' . self::leading_slash_it( $map[ $path ] );
-			}
-		}
+        return self::$manifest;
+    }
 
-		return '';
-	}
-
-
-	/**
-	 * @return array|mixed|object
-	 */
-	private static function get_manifest() {
-		if ( ! self::$manifest ) {
-			$manifest = get_stylesheet_directory() . '/assets/mix-manifest.json';
-
-			if (
-				$map = file_get_contents( $manifest ) and
-				is_array( $map = json_decode( $map, true ) )
-			) {
-				self::$manifest = $map;
-			}
-		}
-
-		return self::$manifest;
-	}
-
-
-	/**
-	 * @param $string
-	 *
-	 * @return string
-	 */
-	private static function leading_slash_it( $string ) {
-		return '/' . ltrim( $string, '/\\' );
-	}
-
-
+    /**
+     * @param $string
+     *
+     * @return string
+     */
+    private static function leadingSlashIt($string)
+    {
+        return '/' . ltrim($string, '/\\');
+    }
 }

@@ -1,9 +1,7 @@
 <?php
 
-
 use WpTailwindCssThemeBoilerplate\AutoLoader;
 use WpTailwindCssThemeBoilerplate\View;
-
 
 /*
  * Set up our auto loading class and mapping our namespace to the app directory.
@@ -17,7 +15,7 @@ use WpTailwindCssThemeBoilerplate\View;
 require get_stylesheet_directory() . '/app/AutoLoader.php';
 $loader = new AutoLoader();
 $loader->register();
-$loader->addNamespace( 'WpTailwindCssThemeBoilerplate', get_stylesheet_directory() . '/app' );
+$loader->addNamespace('WpTailwindCssThemeBoilerplate', get_stylesheet_directory() . '/app');
 
 View::$view_dir = get_stylesheet_directory() . '/templates/views';
 
