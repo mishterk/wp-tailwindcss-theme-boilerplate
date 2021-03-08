@@ -7,3 +7,7 @@ Description: A minimalistic boilerplate for WordPress theme development using Ta
 Version: 1.0
 Text Domain: wp-tailwind-css-theme-boilerplate
 */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
