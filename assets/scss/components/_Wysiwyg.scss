@@ -92,7 +92,7 @@ $module: '.WysiwygCode';
 
 $module: '.WysiwygSpacing';
 #{$module} {
-  p, ul, ol, .wp-block-embed {
+  p, ul, ol, hr, .wp-block-embed, .gallery, [class*="wp-image-"] {
     @apply my-8;
   }
 }
