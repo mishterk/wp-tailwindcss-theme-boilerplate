@@ -15,7 +15,7 @@ module.exports = {
         extend: {
             colors: {
                 link: {
-                    'default': '#3182ce',
+                    DEFAULT: '#3182ce',
                     'hover': '#63b3ed',
                 }
             },
