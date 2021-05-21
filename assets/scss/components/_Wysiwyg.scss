@@ -10,6 +10,7 @@ $module: '.Wysiwyg';
 #{$module} {
   @extend .WysiwygAnchors;
   @extend .WysiwygHeadings;
+  @extend .WysiwygImages;
   @extend .WysiwygCode;
   @extend .WysiwygSpacing;
   @extend .WysiwygLists;
@@ -57,6 +58,28 @@ $module: '.WysiwygHeadings';
 
   h3, h4, h5 {
     @apply text-lg;
+  }
+}
+
+$module: '.WysiwygImages';
+#{$module} {
+  img.aligncenter{
+    @apply block mx-auto;
+  }
+  .gallery{
+    .gallery-item{
+      @apply text-center border-0;
+    }
+    .gallery-icon{
+      @apply text-center;
+    }
+    img{
+      @apply inline;
+      border: none !important;
+    }
+  }
+  .wp-caption-text{
+    @apply text-sm mt-2;
   }
 }
 
