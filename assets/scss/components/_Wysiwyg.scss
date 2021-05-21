@@ -100,8 +100,7 @@ $module: '.WysiwygSpacing';
 $module: '.WysiwygLists';
 #{$module} {
   ul, ol {
-    @apply ml-6 list-outside;
-    @include first_last_marginless;
+    @apply ml-6 list-outside m-trim;
   }
 
   ul {
