@@ -1,9 +1,8 @@
 <?php
-$data = isset( $data ) ? $data : new stdClass();
-$class = isset( $data->class ) ? $data->class : '';
-$id = isset( $data->id ) ? $data->id : '';
-$title = isset( $data->title ) ? $data->title : "";
-$text = isset( $data->text ) ? $data->text : "";
+$class = $args['class'] ?? '';
+$id = $args['id'] ?? '';
+$title = $args['title'] ?? '';
+$text = $args['text'] ?? '';
 ?>
 <div class="ExampleView border-t border-gray-200 <?= $class ?>" id="<?= $id ?>">
 
