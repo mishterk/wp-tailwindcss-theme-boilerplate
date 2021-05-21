@@ -3,11 +3,19 @@ module.exports = {
         removeDeprecatedGapUtilities: true,
         purgeLayersByDefault: true,
     },
-    purge: [
-        './*.php',
-        './templates/**/*.php',
-        './build/js/**/*.js',
-    ],
+    purge: {
+        content: [
+            './*.php',
+            './templates/**/*.php',
+            './build/js/**/*.js',
+        ],
+        options: {
+            safelist: [],
+            blocklist: [],
+            keyframes: true,
+            fontFace: true,
+        },
+    },
     theme: {
         container: {
             center: true,
