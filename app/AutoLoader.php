@@ -1,8 +1,6 @@
 <?php
 
-
 namespace WpTailwindCssThemeBoilerplate;
-
 
 /**
  * PSR4 Autoloader implementation that includes the optional
@@ -52,7 +50,6 @@ namespace WpTailwindCssThemeBoilerplate;
  */
 class AutoLoader {
 
-
 	/**
 	 * An associative array where the key is a namespace prefix and the value
 	 * is an array of base directories for classes in that namespace.
@@ -60,7 +57,6 @@ class AutoLoader {
 	 * @var array
 	 */
 	protected $prefixes = array();
-
 
 	/**
 	 * Register loader with SPL autoloader stack.
@@ -71,7 +67,6 @@ class AutoLoader {
 	public function register() {
 		spl_autoload_register( array( $this, 'loadClass' ) );
 	}
-
 
 	/**
 	 * Adds a base directory for a namespace prefix.
@@ -104,7 +99,6 @@ class AutoLoader {
 			array_push( $this->prefixes[ $prefix ], $base_dir );
 		}
 	}
-
 
 	/**
 	 * Loads the class file for a given class name.
@@ -143,7 +137,6 @@ class AutoLoader {
 		return false;
 	}
 
-
 	/**
 	 * Load the mapped file for a namespace prefix and relative class.
 	 *
@@ -166,8 +159,8 @@ class AutoLoader {
 			// replace namespace separators with directory separators
 			// in the relative class name, append with .php
 			$file = $base_dir
-			        . str_replace( '\\', '/', $relative_class )
-			        . '.php';
+					. str_replace( '\\', '/', $relative_class )
+					. '.php';
 
 			// if the mapped file exists, require it
 			if ( $this->requireFile( $file ) ) {
@@ -179,7 +172,6 @@ class AutoLoader {
 		// never found it
 		return false;
 	}
-
 
 	/**
 	 * If a file exists, require it from the file system.
@@ -197,6 +189,5 @@ class AutoLoader {
 
 		return false;
 	}
-
 
 }

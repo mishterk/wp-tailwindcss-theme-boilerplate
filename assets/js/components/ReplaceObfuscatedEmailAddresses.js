@@ -16,7 +16,7 @@ const ReplaceObfuscatedEmailAddresses = {
 
     class_name: 'ObfuscatedEml',
 
-    init () {
+    init() {
 
         const elements = document.getElementsByClassName(this.class_name);
 
@@ -44,7 +44,7 @@ const ReplaceObfuscatedEmailAddresses = {
 
     },
 
-    deobfuscate (text) {
+    deobfuscate(text) {
         return text.replace(/\[(at|dot)]/g, function (match) {
             if (match === '[at]')
                 return '@';

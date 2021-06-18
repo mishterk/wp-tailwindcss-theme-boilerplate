@@ -63,22 +63,26 @@ $module: '.WysiwygHeadings';
 
 $module: '.WysiwygImages';
 #{$module} {
-  img.aligncenter{
+  img.aligncenter {
     @apply block mx-auto;
   }
-  .gallery{
-    .gallery-item{
+
+  .gallery {
+    .gallery-item {
       @apply text-center border-0;
     }
-    .gallery-icon{
+
+    .gallery-icon {
       @apply text-center;
     }
-    img{
+
+    img {
       @apply inline;
       border: none !important;
     }
   }
-  .wp-caption-text{
+
+  .wp-caption-text {
     @apply text-sm mt-2;
   }
 }

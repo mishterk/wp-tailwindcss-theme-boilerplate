@@ -1,14 +1,10 @@
 <?php
 
-
 namespace WpTailwindCssThemeBoilerplate;
-
 
 class View {
 
-
 	public static $view_dir = '';
-
 
 	/**
 	 * Render View Template With Data
@@ -49,7 +45,6 @@ class View {
 		return $markup;
 	}
 
-
 	/**
 	 * Use this to echo out templates
 	 *
@@ -60,7 +55,6 @@ class View {
 	public static function render( $name, $data = [], $suffix = '.php' ) {
 		echo self::prepare( $name, $data, $suffix );
 	}
-
 
 	/**
 	 * Casts data to an object for use int the template
@@ -79,7 +73,6 @@ class View {
 		return $data;
 	}
 
-
 	/**
 	 * Making sure the template exists
 	 *
@@ -91,7 +84,6 @@ class View {
 		return file_exists( $name );
 	}
 
-
 	/**
 	 * Pieces together the full path to the file
 	 *
@@ -102,6 +94,5 @@ class View {
 	private static function get_full_path( $name ) {
 		return trailingslashit( self::$view_dir ) . ltrim( $name, '/' );
 	}
-
 
 }

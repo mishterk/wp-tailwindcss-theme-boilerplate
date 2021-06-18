@@ -1,8 +1,6 @@
 <?php
 
-
 namespace WpTailwindCssThemeBoilerplate;
-
 
 /**
  * Class AssetResolver
@@ -17,12 +15,10 @@ namespace WpTailwindCssThemeBoilerplate;
  */
 class AssetResolver {
 
-
 	/**
 	 * @var array
 	 */
 	private static $manifest = [];
-
 
 	/**
 	 * @param $path
@@ -42,7 +38,6 @@ class AssetResolver {
 		return '';
 	}
 
-
 	/**
 	 * @return array|mixed|object
 	 */
@@ -61,7 +56,6 @@ class AssetResolver {
 		return self::$manifest;
 	}
 
-
 	/**
 	 * @param $string
 	 *
@@ -70,6 +64,5 @@ class AssetResolver {
 	private static function leading_slash_it( $string ) {
 		return '/' . ltrim( $string, '/\\' );
 	}
-
 
 }
