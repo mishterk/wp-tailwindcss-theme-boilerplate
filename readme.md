@@ -2,7 +2,9 @@ A boilerplate for WordPress theme development using [TailwindCSS](https://tailwi
 
 ## Getting started:
 
-1. Clone into an empty theme directory
+1. `cd` into your `wp-content/themes` directory
+1. Run `git clone https://github.com/mishterk/wp-tailwindcss-theme-boilerplate.git <theme-name-here>` to clone this repo into a new theme.
+   - Be sure to substitute `<theme-name-here>` with your desired theme name.
 1. `cd` into your new theme directory
 1. Run `npm install`
 1. Duplicate the `local-example.json` file to `local.json`, then replace the `proxy` value with your local 
