@@ -1,21 +1,31 @@
 module.exports = {
+    mode: 'jit',
     future: {
         removeDeprecatedGapUtilities: true,
         purgeLayersByDefault: true,
     },
-    purge: [
-        './*.php',
-        './templates/**/*.php',
-        './build/js/**/*.js',
-    ],
+    purge: {
+        content: [
+            './*.php',
+            './templates/**/*.php',
+            './build/js/**/*.js',
+        ],
+        options: {
+            safelist: [],
+            blocklist: [],
+            keyframes: true,
+            fontFace: true,
+        },
+    },
     theme: {
         container: {
+            center: true,
             padding: '1.5rem',
         },
         extend: {
             colors: {
                 link: {
-                    'default': '#3182ce',
+                    DEFAULT: '#3182ce',
                     'hover': '#63b3ed',
                 }
             },

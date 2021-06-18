@@ -3,7 +3,7 @@ const $window = window.$window || $(window);
 
 const ExampleComponent1 = {
 
-    init () {
+    init() {
         var $module = $('.ExampleComponent1');
         if (!$module.length)
             return;
@@ -13,7 +13,7 @@ const ExampleComponent1 = {
         });
     },
 
-    each (element) {
+    each(element) {
 
         let $item = $(element);
 

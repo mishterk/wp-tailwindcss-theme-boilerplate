@@ -10,6 +10,7 @@ $module: '.Wysiwyg';
 #{$module} {
   @extend .WysiwygAnchors;
   @extend .WysiwygHeadings;
+  @extend .WysiwygImages;
   @extend .WysiwygCode;
   @extend .WysiwygSpacing;
   @extend .WysiwygLists;
@@ -60,6 +61,32 @@ $module: '.WysiwygHeadings';
   }
 }
 
+$module: '.WysiwygImages';
+#{$module} {
+  img.aligncenter {
+    @apply block mx-auto;
+  }
+
+  .gallery {
+    .gallery-item {
+      @apply text-center border-0;
+    }
+
+    .gallery-icon {
+      @apply text-center;
+    }
+
+    img {
+      @apply inline;
+      border: none !important;
+    }
+  }
+
+  .wp-caption-text {
+    @apply text-sm mt-2;
+  }
+}
+
 $module: '.WysiwygCode';
 #{$module} {
   code {
@@ -69,7 +96,7 @@ $module: '.WysiwygCode';
 
 $module: '.WysiwygSpacing';
 #{$module} {
-  p, ul, ol, .wp-block-embed {
+  p, ul, ol, hr, .wp-block-embed, .gallery, [class*="wp-image-"] {
     @apply my-8;
   }
 }
@@ -77,8 +104,7 @@ $module: '.WysiwygSpacing';
 $module: '.WysiwygLists';
 #{$module} {
   ul, ol {
-    @apply ml-6 list-outside;
-    @include first_last_marginless;
+    @apply ml-6 list-outside m-trim;
   }
 
   ul {

@@ -16,7 +16,7 @@ const AnimateOnPageLinks = {
     duration: 800,
     offset: -100,
 
-    init () {
+    init() {
 
         $('a').on('click', (e) => {
 
@@ -53,11 +53,11 @@ const AnimateOnPageLinks = {
 
     },
 
-    is_excluded ($selector) {
+    is_excluded($selector) {
         return !!$selector.data('toggle');
     },
 
-    link_is_targeting_on_page_anchor (link) {
+    link_is_targeting_on_page_anchor(link) {
         return /^#/.test(link);
     }
 

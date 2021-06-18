@@ -1,18 +1,17 @@
 <?php
-$data = isset( $data ) ? $data : new stdClass();
-$class = isset( $data->class ) ? $data->class : '';
-$id = isset( $data->id ) ? $data->id : '';
-$title = isset( $data->title ) ? $data->title : "";
-$text = isset( $data->text ) ? $data->text : "";
+$class = $args['class'] ?? '';
+$id = $args['id'] ?? '';
+$title = $args['title'] ?? '';
+$text = $args['text'] ?? '';
 ?>
-<div class="ExampleView border-t border-gray-200 <?= $class ?>" id="<?= $id ?>">
+<div class="ExampleView <?= $class ?>" id="<?= $id ?>">
 
 	<?php if ( $title ): ?>
-        <h2 class="pt-8 text-2xl"><?= $title ?></h2>
+		<h2 class="pt-8 text-2xl font-extrabold text-white sm:text-3xl"><?= $title ?></h2>
 	<?php endif; ?>
 
 	<?php if ( $text ): ?>
-        <p class="text-gray-700"><?= $text ?></p>
+		<p class="mt-4 text-lg leading-6 text-indigo-200"><?= $text ?></p>
 	<?php endif; ?>
 
 </div>
