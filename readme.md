@@ -47,7 +47,7 @@ See the `paths` option in the `mix.purgeCss()` invocation in `webpack.mix.js` fo
 ### How to tell Purge CSS to ignore things
 
 The easiest way is to delineate your CSS with comments as per the example below. See 
-[whitelisting](https://www.purgecss.com/whitelisting) for more options.   
+[safelisting](https://purgecss.com/safelisting.html) for more options.   
 
 ```css
 /* purgecss start ignore */
