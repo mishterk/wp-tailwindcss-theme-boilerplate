@@ -5,38 +5,27 @@
 //
 // The main point of this is to keep these out of the global base styles in order to leverage the
 // full power of TailwindCSS in areas of the site that are not dynamically generated markup.
-
 $module: '.Wysiwyg';
 #{$module} {
+  @apply leading-relaxed;
   @extend .WysiwygAnchors;
   @extend .WysiwygHeadings;
   @extend .WysiwygImages;
   @extend .WysiwygCode;
   @extend .WysiwygSpacing;
   @extend .WysiwygLists;
+  @extend .WysiwygBlockquotes;
 }
 
 $module: '.WysiwygAnchors';
 #{$module} {
   a {
-    &, &:visited {
-      @apply text-link;
-      transition: all 0.24s ease;
-
-      &:hover,
-      &:focus {
-        @apply text-link-hover;
-      }
-
-      &:active {
-      }
-
-      // If an anchor exists inside a heading, inherit the headings color
-      $this: &;
-      @at-root h1, h2, h3, h4, h5, h6 {
-        #{$this} {
-          color: inherit;
-        }
+    @apply text-link;
+    // If an anchor exists inside a heading, inherit the headings color
+    $this: &;
+    @at-root h1, h2, h3, h4, h5, h6 {
+      #{$this} {
+        color: inherit;
       }
     }
   }
@@ -45,19 +34,27 @@ $module: '.WysiwygAnchors';
 $module: '.WysiwygHeadings';
 #{$module} {
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-semibold text-black leading-tight;
+    @apply font-display font-bold text-black leading-tight mt-12 mb-8;
   }
 
   h1 {
-    @apply text-2xl;
+    @apply text-3xl;
   }
 
   h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
     @apply text-xl;
   }
 
-  h3, h4, h5 {
+  h4 {
     @apply text-lg;
+  }
+
+  h5, h6 {
+    @apply text-base;
   }
 }
 
@@ -83,7 +80,7 @@ $module: '.WysiwygImages';
   }
 
   .wp-caption-text {
-    @apply text-sm mt-2;
+    @apply text-sm mt-2 text-gray-light;
   }
 }
 
@@ -96,7 +93,7 @@ $module: '.WysiwygCode';
 
 $module: '.WysiwygSpacing';
 #{$module} {
-  p, ul, ol, hr, .wp-block-embed, .gallery, [class*="wp-image-"] {
+  p, ul, ol, hr, .wp-block-embed, .gallery, .flex-video, [class*="wp-image-"] {
     @apply my-8;
   }
 }
@@ -104,7 +101,8 @@ $module: '.WysiwygSpacing';
 $module: '.WysiwygLists';
 #{$module} {
   ul, ol {
-    @apply ml-6 list-outside m-trim;
+    @apply ml-6 list-outside;
+    @include first_last_marginless;
   }
 
   ul {
@@ -117,5 +115,16 @@ $module: '.WysiwygLists';
 
   li {
     @apply my-3;
+  }
+}
+
+$module: '.WysiwygBlockquotes';
+#{$module} {
+  blockquote{
+    @apply py-8 m-trim bg-yellow-light border-b-2 border-yellow px-4 -mx-4 lg:-mx-24 lg:py-12;
+    @apply text-center text-lg lg:text-xl lg:leading-relaxed font-medium;
+    & > * {
+      @apply max-w-xl mx-auto my-4;
+    }
   }
 }

@@ -1,0 +1,20 @@
+// This is a utility class for applying standard link styles to any element by simply adding the .text-link class.
+.text-link {
+  & {
+    @apply text-green-button underline;
+    transition: all 0.24s ease;
+
+    &:visited {
+      @apply text-green-button underline;
+      transition: all 0.24s ease;
+    }
+
+    &:hover,
+    &:focus {
+      @apply text-green-button-hover;
+    }
+
+    &:active {
+    }
+  }
+}

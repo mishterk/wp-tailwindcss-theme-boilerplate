@@ -1,0 +1,17 @@
+// Set 0 outer margin on first and last child items within an
+// element.
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+@responsive {
+  .m-trim {
+    @include first_last_marginless;
+  }
+}
+
+// Set 0 outer margin on first and last child items within an
+// element where items are horizontally arranged.
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+@responsive {
+  .hm-trim {
+    @include first_last_marginless_hor;
+  }
+}

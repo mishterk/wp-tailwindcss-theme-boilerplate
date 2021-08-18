@@ -1,8 +1,28 @@
 @import "lib/mixins";
+
 @import "~tailwindcss/base";
-@import "partials/base";
-@import "partials/animations";
 @import "~tailwindcss/components";
-@import "partials/components";
 @import "~tailwindcss/utilities";
-@import "partials/utilities";
+
+// Add custom base styles here.
+// noinspection CssInvalidAtRule
+@layer base {
+  html {
+    //@apply antialiased;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+// Add custom component classes here.
+// noinspection CssInvalidAtRule
+@layer components {
+  @import "components/Wysiwyg";
+}
+
+// Add custom utility classes here.
+// noinspection CssInvalidAtRule
+@layer utilities {
+  @import "utilities/text-links";
+  @import "utilities/margin-trims";
+}
