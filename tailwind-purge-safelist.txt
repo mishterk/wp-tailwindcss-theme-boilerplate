@@ -1,0 +1,9 @@
+README:
+This is purely a means of defining any classnames that should NOT be purged as part of the asset build process. This is
+a workaround required whilst we are using TailwindCSS' JIT compiler as it doesn't yet support the `purge.options.safelist`
+config option. See https://tailwindcss.com/docs/just-in-time-mode#limitations for more info on that.
+See https://tailwindcss.com/docs/optimizing-for-production#purge-css-options for config explanation.
+
+LIST CLASSES HERE:
+flex-video
+gform_wrapper
